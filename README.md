@@ -14,4 +14,4 @@ Some of the CSS snippets include:
 -Colored Tags
 & More.
 
-Check out this [Original article](https://obsidianninja.com/2023/04/17/obsidian-css-snippets/). to look up the sources and details on some of these snippets work.
+Check out this [Original article](https://obsidianninja.com/2023/04/17/obsidian-css-snippets/). to look up the sources and details on how some of these snippets work.
