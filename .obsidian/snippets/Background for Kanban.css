@@ -1,0 +1,28 @@
+Background for Kanban
+.theme-dark .view-content .kanban-plugin::after {
+  content: "";
+  position: fixed;
+  background-image: url(https://wallpapercave.com/wp/wp3025553.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px) brightness(70%) saturate(100%);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.theme-light .view-content .kanban-plugin::after {
+  content: "";
+  position: fixed;
+  background-image: url(https://wallpapercave.com/wp/wp3025553.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px) brightness(70%) saturate(100%);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "e6e5cb5db9fe8065",
+    "type": "split",
+    "children": [
+      {
+        "id": "c115d151f649761f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc863b2a8ebb7f57",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fdc84e9a4cc9421f",
+    "type": "split",
+    "children": [
+      {
+        "id": "17a712b11e63e91a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfcdc0b94bc9b429",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "42874992b098daf6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aefe1a8f72e73f80",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "699623cd9fcc4c5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd5790543d22da70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49e2d9e385267603",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Homepage.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bb0f661c673c759a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Homepage.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5d050887d298e3b7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6f3a39a4004d1bbf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Homepage.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "bc863b2a8ebb7f57",
+  "lastOpenFiles": [
+    "Homepage.md",
+    "Folder 3/Be extraordinary by mixing things.md",
+    "Big bets ruin you financially.md",
+    "Automate your life to have more time.md",
+    "Be a Rare Selfless Person.md",
+    "Be Grateful.md",
+    "Beat Procrastination By Taking the Smallest Step.md",
+    "Being a critic is easy.md",
+    "Untitled Kanban.md",
+    "Colored Tags.md",
+    "Daily Note.md",
+    "New File.md",
+    "Untitled.canvas",
+    "pexels-pixabay-60597 2.jpg",
+    "pexels-pixabay-60597 1.jpg",
+    "pexels-pixabay-60597.jpg",
+    "New Note.md",
+    "Folder 1/Attention Management.md",
+    "Folder 2/Be a Perpetual learner.md",
+    "Folder 3",
+    "Folder 2",
+    "Folder 1"
+  ]
+}

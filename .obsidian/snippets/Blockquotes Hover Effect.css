@@ -1,0 +1,53 @@
+/* quote container */
+.markdown-preview-view .quoteback {
+  border: 1px solid #c2dfe3;
+  border-radius: 8px;
+  color: rgb(70, 74, 77);
+  padding: 1rem 1rem 0rem 1rem;
+  position: relative;
+}
+
+/* make border darker on hover */
+.markdown-preview-view .quoteback:hover {
+	border: 1px solid #9db8bf;
+}
+
+/* quote footer */
+.markdown-preview-view .quoteback>footer {
+  border-top: 1px solid lightblue;
+  font-size: .875rem;
+  font-weight: 600;
+  margin: 0.5rem -1rem auto -1rem;
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+/* quote link */
+.markdown-preview-view .quoteback>footer>cite>a {
+	height: 100%;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* quote title */
+.markdown-preview-view .quoteback::after {
+  display: block;
+  color: rgb(92, 109, 115);
+  content: attr(data-title);
+  font-size: .875rem;
+  font-weight: 600;
+  margin: 0 -1rem;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+blockquote {
+  transition-duration: 0.2s;
+}
+
+blockquote:hover {
+  box-shadow: 0 10px 16px lightgrey;
+  transform: translateY(-10px);
+}

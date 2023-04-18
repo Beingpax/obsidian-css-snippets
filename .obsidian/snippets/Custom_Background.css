@@ -1,0 +1,156 @@
+/* @settings
+
+name: Custom Background
+id: custom-backgrounds
+settings:
+- 
+  id: bg-on
+  title: Background Image
+  description: Enables the background
+  type: class-toggle
+- 
+  id: app-background-url
+  title: Background URL
+  description: Set a local or online background image. You can link an online image with its url or a local file with url("app://local/C:/Users/[Your Username]/Pictures/test.png")
+  type: variable-text
+  default: url("http://")
+- 
+  id: pane-color
+  title: Pane Color
+  type: variable-color
+  opacity: false
+  format: rgb-values
+  default: 'rgb(255,255,255)'
+- 
+  id: pane-opacity
+  title: Pane Opacity
+  description: How opaque page backgrounds are
+  type: variable-number-slider
+  default: 0.5
+  min: 0
+  max: 1
+  step: 0.05
+- 
+  id: tab-opacity
+  title: Tab Opacity
+  description: How opaque pane tab backgrounds are
+  type: variable-number-slider
+  default: 0.9
+  min: 0
+  max: 1
+  step: 0.05
+- 
+  id: ui-opacity
+  title: UI Opacity
+  description: How opaque UI backgrounds are
+  type: variable-number-slider
+  default: 0.5
+  min: 0
+  max: 1
+  step: 0.05
+- 
+  id: header-bg-setting
+  title: Background Filters
+  type: heading
+  level: 1
+  collapsed: true
+- 
+  id: custom-bg-brightness
+  title: Background Brightness
+  description: How bright the background is
+  type: variable-number-slider
+  default: 1
+  min: 0
+  max: 2
+  step: 0.1
+- 
+  id: custom-bg-blur
+  title: Background Blur
+  description: How blurry the background is
+  type: variable-number-slider
+  default: 6
+  min: 0
+  max: 12
+  step: 1
+  format: px
+- 
+  id: custom-bg-saturation
+  title: Background Saturation
+  description: How saturated the background colors are
+  type: variable-number-slider
+  default: 1
+  min: 0
+  max: 2
+  step: 0.1
+
+
+*/
+
+
+/** Set up colors **/
+body.bg-on {
+  --background-transparent: rgba(var(--pane-color, 255, 255, 255), var(--pane-opacity, 0.5));
+  --background-tabs-transparent: rgba(var(--pane-color, 255, 255, 255), var(--tab-opacity, 0.7));
+  --background-partially-transparent: rgba(var(--pane-color, 255, 255, 255), var(--ui-opacity, 0.5));
+}
+
+
+/** Main background **/
+
+/* Apply a background image */
+.bg-on .horizontal-main-container {
+  background-color: var(--background-primary);
+  background-image: var(--app-background-url);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Background filters */
+.horizontal-main-container > .workspace {
+  backdrop-filter:
+    brightness(var(--custom-bg-brightness,0.5))
+    blur(var(--custom-bg-blur,0))
+    saturate(var(--custom-bg-saturation, 1));
+  background: transparent;
+}
+
+/* Removing in-between backgrounds */
+.workspace-split:not(.mod-left-split, .mod-right-split),
+.workspace-leaf {
+  background-color: transparent !important;
+}
+
+
+/** Make main tabs and panes transparent **/
+
+/* Make panes transparent */
+.bg-on :is(.mod-root .view-content, .view-header) {
+  background-color: var(--background-transparent) !important;
+}
+
+/* Make tabs transparent */
+.bg-on .workspace-tab-container .workspace-tab-header:not(.mod-active) {
+  background-color: var(--background-tabs-transparent) !important;
+}
+.bg-on .workspace-tab-container .workspace-tab-header.mod-active {
+  background-color: var(--background-tabs-transparent) !important;
+}
+
+/* Remove tabs weird gradients */
+.view-header-title-container:not(.mod-at-end):after {
+  display: none;
+}
+
+
+/** Make other UI transparent **/
+
+.mod-vertical.mod-root >.mod-top > .workspace-tab-header-container,
+.workspace-ribbon,
+.workspace-ribbon::before,
+.titlebar-button-container,
+.workspace-split {
+  background-color: var(--background-partially-transparent) !important;
+}
+.workspace-tab-header-container {
+  background-color: transparent;
+}

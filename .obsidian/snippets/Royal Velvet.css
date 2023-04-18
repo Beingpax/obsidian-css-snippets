@@ -1,0 +1,467 @@
+
+/* @settings
+
+name: Royal Velvet
+id: royal-velvet
+settings:
+  -
+    id: inline-document-title-color
+    title: Inline Document Title Color
+    description: Change the color of the inline document title to match another heading or a custom hue.
+    type: class-select
+    allowEmpty: false
+    default: doc-title-h1
+    options:
+      -
+        label: Disabled
+        value: doc-title-disable
+      -
+        label: Accent Color (hue)
+        value: doc-title-accent
+      -
+        label: Rainbow
+        value: doc-title-rainbow
+      -
+        label: Heading 1
+        value: doc-title-h1
+      -
+        label: Heading 2
+        value: doc-title-h2
+      -
+        label: Heading 3
+        value: doc-title-h3
+      -
+        label: Heading 4
+        value: doc-title-h4
+      -
+        label: Heading 5
+        value: doc-title-h5
+      -
+        label: Heading 6
+        value: doc-title-h6
+*/
+
+/*Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --default-font: "Fira Sans", "Inter", sans-serif; /*Note and Settings Text*/
+  --font-monospace: "Fira Code", "Source Code Pro", monospace; /*Code block text*/
+}
+
+body {
+  --font-monospace-theme: "Fira Code", "Source Code Pro", monospace; /*Code block text*/
+}
+
+/*Dark Theme Variables*/
+.theme-dark {
+  --layer-0: hsl(var(--layer-hue-sat), 9%);
+  --layer-1: hsl(var(--layer-hue-sat), 13%);
+  --layer-2: hsl(var(--layer-hue-sat), 15%);
+  --layer-3: hsl(var(--layer-hue-sat), 19%);
+  --layer-4: hsl(var(--layer-hue-sat), 30%);
+  --on-layer-tuple: 60, 30%, 96%;
+
+  --red-hue: 10;
+  --orange-hue: 35;
+  --yellow-hue: 60;
+  --green-hue: 115;
+  --blue-hue: 170;
+  --purple-hue: 250;
+  --purple-pink-hue: 285;
+  --pink-hue: 330;
+
+  --primary-sat: 100%;
+  --secondary-sat: 100%;
+
+  --primary-lit: 75.1%;
+  --secondary-lit: 90%;
+
+}
+/*Light Theme Variables*/
+.theme-light {
+  --layer-0: hsl(var(--layer-hue-sat), 89%);
+  --layer-1: hsl(var(--layer-hue-sat), 99%);
+  --layer-2: hsl(var(--layer-hue-sat), 96%);
+  --layer-3: hsl(var(--layer-hue-sat), 83%);
+  --layer-4: hsl(var(--layer-hue-sat), 80%);
+  --on-layer-tuple: 234, 14%, 15%;
+
+  --red-hue: 0;
+  --orange-hue: 30;
+  --yellow-hue: 40;
+  --green-hue: 105;
+  --blue-hue: 200;
+  --purple-hue: 300;
+  --purple-pink-hue: 310;
+  --pink-hue: 330;
+
+  --primary-sat: 100%;
+  --secondary-sat: 80%;
+
+  --primary-lit: 43%;
+  --secondary-lit: 50%;
+}
+
+/*Common Variables*/
+.theme-dark,
+.theme-light {
+  --layer-hue-sat: 235, 15%;
+
+  --on-layer: hsl(var(--on-layer-tuple));
+  --on-layer-600: hsla(var(--on-layer-tuple), 0.6);
+  --on-layer-400: hsla(var(--on-layer-tuple), 0.4);
+
+  /* red */
+  --red-tuple: var(--red-hue), var(--primary-sat), var(--primary-lit);
+  --red: hsl(var(--red-tuple));
+  --red-900: hsla(var(--red-tuple), 0.9);
+
+  --red-secondary-tuple: var(--red-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* orange */
+  --orange-tuple: var(--orange-hue), var(--primary-sat), var(--primary-lit);
+  --orange: hsl(var(--orange-tuple));
+  --orange-100: hsla(var(--orange-tuple), 0.1);
+
+  --orange-secondary-tuple: var(--orange-hue), var(--secondary-sat), var(--secondary-lit);
+  --orangeSecondary: hsl(var(--orange-secondary-tuple));
+
+  /* yellow */
+  --yellow-tuple: var(--yellow-hue), var(--primary-sat), var(--primary-lit);
+  --yellow: hsl(var(--yellow-tuple));
+  --yellow-100: hsla(var(--yellow-tuple), 0.1);
+  --yellow-700: hsla(var(--yellow-tuple), 0.7);
+
+  --yellow-secondary-tuple: var(--yellow-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* green */
+  --green-tuple: var(--green-hue), var(--primary-sat), var(--primary-lit);
+  --green: hsl(var(--green-tuple));
+  --green-200: hsla(var(--green-tuple), 0.2);
+
+  --green-secondary-tuple: var(--green-hue), var(--secondary-sat), var(--secondary-lit);
+  --greenSecondary: hsl(var(--green-secondary-tuple));
+
+  /* blue */
+  --blue-tuple: var(--blue-hue), var(--primary-sat), var(--primary-lit);
+  --blue: hsl(var(--blue-tuple));
+  --blue-600: hsla(var(--blue-tuple), 0.6);
+
+  --blue-secondary-tuple: var(--blue-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple */
+  --purple-tuple: var(--purple-hue), var(--primary-sat), var(--primary-lit);
+  --purple: hsl(var(--purple-tuple));
+  --purple-200: hsla(var(--purple-tuple), 0.2);
+
+  --purple-secondary-tuple: var(--purple-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple-pink */
+  --purple-pink-tuple: var(--purple-pink-hue), var(--primary-sat), var(--primary-lit);
+  --purple-pink: hsl(var(--purple-pink-tuple));
+
+  --purple-pink-secondary-tuple: var(--purple-pink-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* pink */
+  --pink-tuple: var(--pink-hue), var(--primary-sat), var(--primary-lit);
+  --pink: hsl(var(--pink-tuple));
+  --pink-100: hsla(var(--pink-tuple), 0.1);
+  --pink-300: hsla(var(--pink-tuple), 0.3);
+  --pink-400: hsla(var(--pink-tuple), 0.4);
+
+  --pink-secondary-tuple: var(--pink-hue), var(--secondary-sat), var(--secondary-lit);
+  --pinkSecondary: hsl(var(--pink-secondary-tuple));
+
+  --gradientDegree: 135deg;
+
+  --background-modifier-cover: var(--layer-0); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--layer-2); /*Note background*/
+  --background-primary-alt: var(--layer-1); /*Note Title background active*/
+  --background-secondary: var(--layer-1); /*Sidebar background*/
+  --background-secondary-alt: var(--layer-0); /*Sidebar Title background*/
+
+  --background-modifier-border: var(--layer-1); /*Border outline of quotes, tables, line breaks*/
+  --background-modifier-form-field: var(--pink-100);
+  --background-modifier-form-field-highlighted: var(--pink-300);
+  --background-modifier-box-shadow: var(--layer-3);
+  --background-modifier-success: var(--green-200);
+  --background-modifier-error: var(--red-900);
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: var(--red);
+
+  --text-normal: var(--on-layer); /*Text body of note*/
+  --text-muted: var(
+    --on-layer-600
+  ); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+  --text-accent: var(--pink); /*Links*/
+  --text-accent-hover: var(--pinkSecondary); /*Links hover*/
+  --text-faint: var(--on-layer-600); /*Link brackets color & Gutter Numbers*/
+  --text-error: var(--red);
+  --text-error-hover: var(--redSecondary);
+
+  --text-highlight-bg: var(--yellow-100); /*Search Matches*/
+  --text-highlight-bg-active: var(--orange-100); /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--purple-200); /*Text Selections*/
+
+  /* other custom vars */
+  --indentation-guide-opacity: 10%;
+
+  /* --Obsidian Variables-- */
+  --interactive-normal: var(--layer-1); /*Button Color*/
+  --interactive-hover: var(--layer-0); /*Button Hovered Color*/
+  --interactive-accent: var(--pink); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--orange); /*Menu Button Hover*/
+  --interactive-success: var(--green);
+
+  --scrollbar-bg: var(--layer-2); /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: var(--pink-100); /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--pink-300); /*Scrollbar Dragged Color*/
+  --indentation-guide: var(--layer-4);
+
+  --blockquote-border: var(--red);
+  --link-color: var(--orange); /* internal link */
+  --link-color-hover: var(--orangeSecondary);
+  --link-unresolved-color: var(--yellow-700);
+  --link-unresolved-hover: var(--yellow);
+  --link-external-color: var(--green);
+  --link-external-color-hover: var(--greenSecondary);
+  --table-header-color: var(--layer-2);
+  --text-on-accent: var(--layer-2);
+
+  --background-modifier-border-hover: transparent;
+  --modal-border-color: transparent;
+  --prompt-border-color: transparent;
+  --background-modifier-border-focus: transparent; /* border around active input boxes */
+  --background-modifier-border: transparent; /* separator lines in eg. setting menu */
+  --input-shadow: none;
+  --blockquote-border-color: none;
+  --ribbon-background: var(--background-secondary-alt);
+  --ribbon-background-collapsed: var(--background-secondary-alt);
+  --code-normal: var(--purple-pink);
+  --code-size: 100%;
+
+  --hr-color: var(--orange); /* Horizontal Line */
+}
+
+/*Setting Dropdown*/
+.theme-dark .dropdown {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22292.4%22%20height=%22292.4%22%3E%3Cpath%20d=%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%20fill=%22hsl(60,%2030%25,%2096.1%25)%22/%3E%3C/svg%3E");
+}
+.theme-light .dropdown {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22292.4%22%20height=%22292.4%22%3E%3Cpath%20d=%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%20fill=%22hsl(234,%2014%25,%2015%25)%22/%3E%3C/svg%3E");
+}
+.dropdown {
+  font-family: var(--default-font);
+}
+
+.menu-item-icon {
+  color: var(--green);
+}
+
+/*--File Explorer--*/
+.nav-folder-title-content {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--pink) 0,
+    var(--orange) 100%
+  );
+  font-weight: 900;
+}
+
+.collapse-icon:hover {
+  color: var(--pink);
+}
+
+.nav-file-title.is-active {
+  background-color: var(--yellow-100);
+  color: var(--yellow);
+  font-weight: bolder;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background-color: var(--yellow-100);
+  color: var(--yellow);
+}
+
+.nav-folder-title:hover .nav-folder-collapse-indicator {
+  color: var(--pink);
+}
+.nav-file-title {
+  line-height: 100%;
+}
+
+
+/*--Workspace: Notes--*/
+/*Note Title Bar*/
+.workspace-leaf .view-header {
+  border-bottom: 5px solid var(--layer-2);
+}
+
+.view-header-title {
+  color: var(--pinkSecondary);
+}
+
+.workspace-split.mod-root
+  > .workspace-leaf:first-of-type:last-of-type
+  .view-header,
+.view-header {
+  border-bottom: 5px solid var(--layer-2);
+}
+/*Active Note Titlebar*/
+/*Note Title Bar: Text*/
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--pink);
+}
+
+/*--Emphasis--*/
+strong,
+.cm-s-obsidian .cm-strong,
+.cm-s-obsidian .cm-quote.cm-strong {
+  color: var(--pink);
+}
+
+em,
+.cm-s-obsidian .cm-em,
+.cm-s-obsidian .cm-quote.cm-em {
+  color: var(--blue);
+}
+
+.cm-em.cm-strong,
+strong > em {
+  color: var(--red);
+}
+
+/*Highlight*/
+.markdown-preview-view mark,
+.cm-s-obsidian .cm-highlight,
+.cm-s-obsidian .cm-highlight.cm-quote,
+.cm-s-obsidian .cm-formatting-highlight {
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.cm-strikethrough,
+del {
+  color: var(--on-layer-400);
+}
+
+/*--Headers/Headings--*/
+body:not(.doc-title-disable) .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+body.doc-title-accent .inline-title {
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    hsl(calc(var(--accent-h) + 30), var(--primary-sat), var(--primary-lit)) 0,
+    hsl(calc(var(--accent-h) - 30), var(--primary-sat), var(--primary-lit)) 100%
+  );
+}
+
+body.doc-title-rainbow .inline-title {
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--pink) 0,
+    var(--orange) 8.33%,
+    var(--yellow) 16.66%,
+    var(--green) 25%,
+    var(--blue) 33.33%,
+    var(--purple) 41.66%,
+    var(--pink) 50%,
+    var(--orange) 58.33%,
+    var(--yellow) 66.66%,
+    var(--green) 75%,
+    var(--blue) 83.33%,
+    var(--purple) 91.66%,
+    var(--pink) 100%
+  );
+}
+
+h1,
+.cm-header-1,
+body.doc-title-h1 .inline-title,
+body:not([class*="doc-title"]) .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--pink) 0,
+    var(--orange) 100%
+  );
+} /*Source Mode*/
+
+h2,
+.cm-header-2,
+body.doc-title-h2 .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--orange) 0,
+    var(--yellow) 100%
+  );
+} /*Source Mode*/
+
+h3,
+.cm-header-3,
+body.doc-title-h3 .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--yellow) 0,
+    var(--green) 100%
+  );
+} /*Source Mode*/
+
+h4,
+.cm-header-4,
+body.doc-title-h4 .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--green) 0,
+    var(--blue) 100%
+  );
+} /*Source Mode*/
+
+h5,
+.cm-header-5,
+body.doc-title-h5 .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--blue) 0,
+    var(--purple) 100%
+  );
+} /*Source Mode*/
+
+h6,
+.cm-header-6,
+body.doc-title-h6 .inline-title {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--purple) 0,
+    var(--pink) 100%
+  );
+} /*Source Mode*/
+
+

@@ -1,0 +1,23 @@
+.kanban-plugin__placeholder {
+  flex-shrink: 1;
+}
+
+div.kanban-plugin__board > div {
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+//div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+  max-height: 30vh;
+}
+
+div.kanban-plugin__board .kanban-plugin__lane-wrapper + .kanban-plugin__lane-wrapper {
+  margin-top: 0.25rem;
+  margin-right: 0;
+}
+
+div.kanban-plugin__board > div {
+  padding: 0.125rem;
+  padding-left: 1rem;
+  overflow-x: auto;
+}

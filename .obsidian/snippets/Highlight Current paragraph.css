@@ -1,0 +1,4 @@
+Highlight Current paragraph
+.cm-active {
+    background-color: rgba(60, 56, 54, 0.5)
+}

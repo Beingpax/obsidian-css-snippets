@@ -1,0 +1,88 @@
+Pretty Highlights
+.theme-dark{
+    /*----------------------------------------------------------------
+    HIGHLIGHTERS 
+    ----------------------------------------------------------------*/
+    --yellow-highlighter: #FFF3A3A6;
+    --pink-highlighter: #FFB8EBA6;
+    --red-highlighter: #FF5582A6;
+    --blue-highlighter: #ADCCFFA6;
+    --green-highlighter: #BBFABBA6;
+    --purple-highlighter: #D2B3FFA6;
+    --orange-highlighter: #FFB86CA6;
+    --grey-highlighter: #CACFD9A6;
+  
+    --text-highlight-rgb: var(--pink-highlighter);
+}
+
+.theme-light{
+    /*----------------------------------------------------------------
+    HIGHLIGHTERS 
+    ----------------------------------------------------------------*/
+    --yellow-highlighter: #FFF3A3A6;
+    --pink-highlighter: #FFB8EBA6;
+    --red-highlighter: #FF5582A6;
+    --blue-highlighter: #ADCCFFA6;
+    --green-highlighter: #BBFABBA6;
+    --purple-highlighter: #D2B3FFA6;
+    --orange-highlighter: #FFB86CA6;
+    --grey-highlighter: #CACFD9A6;
+  
+    --text-highlight-rgb: var(--yellow-highlighter);
+}
+
+/*----------------------------------------------------------------
+HIGHLIGHTING (MARK)
+----------------------------------------------------------------*/
+
+.markdown-preview-view mark {
+    font-weight: 500;
+    background-color: var(--text-highlight-rgb);
+}
+
+.cm-s-obsidian span.cm-highlight {
+    font-weight: 500;
+    background-color: var(--text-highlight-rgb);
+}
+
+/*----------------------------------------------------------------
+REALISTIC HIGHLIGHT
+----------------------------------------------------------------*/
+mark.yellow{ --text-highlight-rgb: var(--yellow-highlighter); }
+mark.pink{ --text-highlight-rgb: var(--pink-highlighter); }
+mark.blue{ --text-highlight-rgb: var(--blue-highlighter); }
+mark.green{ --text-highlight-rgb: var(--green-highlighter); }
+mark.red{ --text-highlight-rgb: var(--red-highlighter);  }
+mark.grey{ --text-highlight-rgb: var(--grey-highlighter);  }
+mark.orange{ --text-highlight-rgb: var(--orange-highlighter);  }
+mark.red{ --text-highlight-rgb: var(--red-highlighter);  }
+mark.purple{ --text-highlight-rgb: var(--purple-highlighter);  }
+
+.markdown-preview-view mark {
+  margin: 0 -0.05em; 
+  padding: 0.125em 0.15em;
+  border-radius: .25em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  }
+  
+  span.cm-highlight {
+  padding: .1em 0.15em;
+  border-radius: .2em;
+  background: var(--text-highlight-rgb);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  }
+  
+  span.cm-formatting-highlight{
+  /*margin: 0 0 0 -0.4em;*/
+  background: var(--text-highlight-rgb);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  }
+  
+  .cm-highlight+span.cm-formatting-highlight {
+  background: var(--text-highlight-rgb);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  }

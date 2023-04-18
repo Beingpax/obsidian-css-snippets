@@ -1,0 +1,29 @@
+Hide Ribbon
+/*HIDE RIBBON WHEN SIDEBAR IS COLLAPSED*/
+.side-dock-ribbon.mod-left.is-collapsed .side-dock-ribbon-action {
+    opacity: 0;
+    transition: opacity .3s;  
+}
+.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-actions:hover .side-dock-ribbon-action,
+.side-dock-ribbon.mod-left.is-collapsed:hover .side-dock-settings:hover .side-dock-ribbon-action {
+    opacity: 1;
+}
+
+
+/*HIDE RIBBON WHEN SIDEBAR IS EXPANDED*/
+.side-dock-ribbon.mod-left:not(.is-collapsed) .side-dock-ribbon-action,
+.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn svg {
+    opacity: 0;
+}
+.side-dock-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn:not(hover) + .side-dock-actions:hover .side-dock-ribbon-action,
+.side-dock-ribbon.mod-left:hover:not(.is-collapsed) .side-dock-ribbon-action,
+.side-dock-ribbon.mod-left:hover:not(.is-collapsed) .workspace-ribbon-collapse-btn svg {
+    opacity: 1;
+}
+.side-dock-ribbon.mod-left:not(.is-collapsed) {
+    flex: 0 0 5px;
+    transition: flex .2s;
+}
+.side-dock-ribbon.mod-left:hover:not(.is-collapsed) {
+    flex: 0 0 40px;
+}

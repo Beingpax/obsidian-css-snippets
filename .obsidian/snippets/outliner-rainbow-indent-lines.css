@@ -1,0 +1,81 @@
+/* RAINBOW COLORS: #5461c8, #c724b1, #e4002b, #ff6900, #f6be00, #97d700, #00ab84 and #00a3e0 */
+.outliner-plugin-bls {
+  --indent-width: 1.8ch;
+  --color-count: 8;
+  --indent-1: #5461c8;
+  --indent-2: #c724b1;
+  --indent-3: #e4002b;
+  --indent-4: #ff6900;
+  --indent-5: #f6be00;
+  --indent-6: #97d700;
+  --indent-7: #00ab84;
+  --indent-8: #00a3e0;
+  --indent-bg-size: calc(var(--color-count) * var(--indent-width)) 1px;
+  --indent-rainbow-bg: linear-gradient(
+    to right,
+    var(--indent-1), var(--indent-1) 0,
+    transparent 1px, transparent calc(1 * var(--indent-width)),
+    var(--indent-2) 0, var(--indent-2) calc(1 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(2 * var(--indent-width)),
+    var(--indent-3) 0, var(--indent-3) calc(2 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(3 * var(--indent-width)),
+    var(--indent-4) 0, var(--indent-4) calc(3 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(4 * var(--indent-width)),
+    var(--indent-5) 0, var(--indent-5) calc(4 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(5 * var(--indent-width)),
+    var(--indent-6) 0, var(--indent-6) calc(5 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(6 * var(--indent-width)),
+    var(--indent-7) 0, var(--indent-7) calc(6 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(7 * var(--indent-width)),
+    var(--indent-8) 0, var(--indent-8) calc(7 * var(--indent-width) + 1px),
+    transparent 1px, transparent calc(8 * var(--indent-width))
+  );
+}
+
+.outliner-plugin-bls .cm-formatting-list-ul.cm-list-1:first-child:before ,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-8, .cm-hmd-list-indent-9) + .cm-formatting-list-ul.cm-list-3::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-16, .cm-hmd-list-indent-17) + .cm-formatting-list-ul.cm-list-2::before {
+  color: var(--indent-1) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-1, .cm-hmd-list-indent-2) + .cm-formatting-list-ul.cm-list-2::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-9, .cm-hmd-list-indent-10) + .cm-formatting-list-ul.cm-list-1::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-17, .cm-hmd-list-indent-18) + .cm-formatting-list-ul.cm-list-3::before {
+  color: var(--indent-2) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-2, .cm-hmd-list-indent-3) + .cm-formatting-list-ul.cm-list-3::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-10, .cm-hmd-list-indent-11) + .cm-formatting-list-ul.cm-list-2::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-18, .cm-hmd-list-indent-19) + .cm-formatting-list-ul.cm-list-1::before {
+  color: var(--indent-3) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-3, .cm-hmd-list-indent-4) + .cm-formatting-list-ul.cm-list-1::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-11, .cm-hmd-list-indent-12) + .cm-formatting-list-ul.cm-list-3::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-19, .cm-hmd-list-indent-20) + .cm-formatting-list-ul.cm-list-2::before {
+  color: var(--indent-4) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-4, .cm-hmd-list-indent-5) + .cm-formatting-list-ul.cm-list-2::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-12, .cm-hmd-list-indent-13) + .cm-formatting-list-ul.cm-list-1::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-20, .cm-hmd-list-indent-21) + .cm-formatting-list-ul.cm-list-3::before {
+  color: var(--indent-5) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-5, .cm-hmd-list-indent-6) + .cm-formatting-list-ul.cm-list-3::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-13, .cm-hmd-list-indent-14) + .cm-formatting-list-ul.cm-list-2::before ,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-21, .cm-hmd-list-indent-22) + .cm-formatting-list-ul.cm-list-1::before{
+  color: var(--indent-6) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-6, .cm-hmd-list-indent-7) + .cm-formatting-list-ul.cm-list-1::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-14, .cm-hmd-list-indent-15) + .cm-formatting-list-ul.cm-list-3::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-22, .cm-hmd-list-indent-23) + .cm-formatting-list-ul.cm-list-2::before {
+  color: var(--indent-7) !important;
+}
+.outliner-plugin-bls :is(.cm-hmd-list-indent-7, .cm-hmd-list-indent-8) + .cm-formatting-list-ul.cm-list-2::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-15, .cm-hmd-list-indent-16) + .cm-formatting-list-ul.cm-list-1::before,
+.outliner-plugin-bls :is(.cm-hmd-list-indent-23, .cm-hmd-list-indent-24) + .cm-formatting-list-ul.cm-list-3::before {
+  color: var(--indent-8) !important;
+}
+
+.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
+  background-image: var(--indent-rainbow-bg) !important;
+  background-size: var(--indent-bg-size) !important;
+  left: 3px !important;
+  background-position-x: 0 !important;
+}

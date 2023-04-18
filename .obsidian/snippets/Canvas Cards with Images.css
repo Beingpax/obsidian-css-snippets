@@ -1,0 +1,15 @@
+Canvas Cards with Images
+/*
+Reddit post: https://www.reddit.com/r/ObsidianMD/comments/11n389p/i_made_a_css_snippet_to_give_your_canvas_cards_a/
+My Github: https://github.com/TheKoTech
+*/
+.canvas img[alt~="canvas-top"] {
+	position: relative;
+	left: -24px;
+	top: -24px;
+	object-fit: cover;
+	width: calc(100% + 48px);
+	max-width: none;
+	display: block;
+	margin-bottom: -12px;
+}

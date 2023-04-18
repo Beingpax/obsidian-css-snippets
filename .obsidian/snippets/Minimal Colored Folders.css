@@ -1,0 +1,152 @@
+.theme-dark {
+    /*Darker Color for 2*/
+    --f-f: #3b4252;
+    --f-r: #bf616a;
+    --f-o: #d08770;
+    --f-y: #ebcb8b;
+    --f-g: #a3be8c;
+    --f-p: #b48ead;
+    --f-sg: #8fbcbb;
+    --f-lb: #88c0d0;
+    --f-frst: #81a1c1;
+    --f-b: #5e81ac;
+}
+
+.theme-light {
+    /*Darker Color for 1*/
+    --f-f: #3b4252;
+    --f-r: #bf616a;
+    --f-o: #d08770;
+    --f-y: #ebcb8b;
+    --f-g: #a3be8c;
+    --f-p: #b48ead;
+    --f-sg: #8fbcbb;
+    --f-lb: #88c0d0;
+    --f-frst: #81a1c1;
+    --f-b: #5e81ac;
+}
+/*00 Meta*/
+.nav-folder-title[data-path="00 Meta"] {
+    color: var(--f-f);
+    background: var(--f-r) !important;
+    border-bottom: 2px solid var(--f-r);
+}
+.nav-folder-title[data-path*="00 Meta"],
+.nav-folder-title[data-path*="00 Meta"] + .nav-folder-children,
+.nav-file-title[data-path*="00 Meta"] {
+    border-left: 3px solid var(--f-r);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="00 Meta"]:hover,
+.nav-folder-title[data-path*="00 Meta"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="00 Meta"]:hover {
+    border-color: var(--f-r);
+}
+
+/*10 Life*/
+.nav-folder-title[data-path="10 Life"] {
+    color: var(--f-f);
+    background: var(--f-o) !important;
+    border-bottom: 2px solid var(--f-o);
+}
+.nav-folder-title[data-path*="10 Life"],
+.nav-folder-title[data-path*="10 Life"] + .nav-folder-children,
+.nav-file-title[data-path*="10 Life"] {
+    border-left: 3px solid var(--f-o);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="10 Life"]:hover,
+.nav-folder-title[data-path*="10 Life"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="10 Life"]:hover {
+    border-color: var(--f-o);
+}
+
+/*20 IT*/
+.nav-folder-title[data-path="20 IT"] {
+    color: var(--f-f);
+    background: var(--f-y) !important;
+    border-bottom: 2px solid var(--f-y);
+}
+.nav-folder-title[data-path*="20 IT"],
+.nav-folder-title[data-path*="20 IT"] + .nav-folder-children,
+.nav-file-title[data-path*="20 IT"] {
+    border-left: 3px solid var(--f-y);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="20 IT"]:hover,
+.nav-folder-title[data-path*="20 IT"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="20 IT"]:hover {
+    border-color: var(--f-y);
+}
+
+/*30 Hobbies*/
+.nav-folder-title[data-path="30 Hobbies"] {
+    color: var(--f-f);
+    background: var(--f-g) !important;
+    border-bottom: 2px solid var(--f-g);
+}
+.nav-folder-title[data-path*="30 Hobbies"],
+.nav-folder-title[data-path*="30 Hobbies"] + .nav-folder-children,
+.nav-file-title[data-path*="30 Hobbies"] {
+    border-left: 3px solid var(--f-g);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="30 Hobbies"]:hover,
+.nav-folder-title[data-path*="30 Hobbies"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="30 Hobbies"]:hover {
+    border-color: var(--f-g);
+}
+
+/*40 Objects*/
+.nav-folder-title[data-path="40 Objects"] {
+    color: var(--f-f);
+    background: var(--f-p) !important;
+    border-bottom: 2px solid var(--f-p);
+}
+.nav-folder-title[data-path*="40 Objects"],
+.nav-folder-title[data-path*="40 Objects"] + .nav-folder-children,
+.nav-file-title[data-path*="40 Objects"] {
+    border-left: 3px solid var(--f-p);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="40 Objects"]:hover,
+.nav-folder-title[data-path*="40 Objects"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="40 Objects"]:hover {
+    border-color: var(--f-p);
+}
+
+/*50 Company*/
+.nav-folder-title[data-path="50 Company"] {
+    color: var(--f-f);
+    background: var(--f-lb) !important;
+    border-bottom: 2px solid var(--f-lb);
+}
+.nav-folder-title[data-path*="50 Company"],
+.nav-folder-title[data-path*="50 Company"] + .nav-folder-children,
+.nav-file-title[data-path*="50 Company"] {
+    border-left: 3px solid var(--f-lb);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="50 Company"]:hover,
+.nav-folder-title[data-path*="50 Company"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="50 Company"]:hover {
+    border-color: var(--f-lb);
+}
+
+/*Github Pages*/
+.nav-folder-title[data-path="GithubPages"] {
+    color: var(--f-f);
+    background: var(--f-frst) !important;
+    border-bottom: 2px solid var(--f-frst);
+}
+.nav-folder-title[data-path*="GithubPages"],
+.nav-folder-title[data-path*="GithubPages"] + .nav-folder-children,
+.nav-file-title[data-path*="GithubPages"] {
+    border-left: 3px solid var(--f-frst);
+    margin-left: 8px;
+}
+.nav-folder-title[data-path*="GithubPages"]:hover,
+.nav-folder-title[data-path*="GithubPages"] + .nav-folder-children:hover,
+.nav-file-title[data-path*="GithubPages"]:hover {
+    border-color: var(--f-frst);
+}
